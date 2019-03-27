@@ -55,11 +55,12 @@ Main goal is to practice DEVOPS ( using Git, Jenkins, Artifactory, Sonar, ELK an
 
 
 ### Make a new release
-- Configure the right artifact version snapshot number in the root pom in the development branch.
-- Commit and push the development branch to remote.
-- Make release branch from development branch using gitFlow. Set version ( use pattern vMajor.Minor.Build ) to snapshot version without SNAPSHOT text.
+- Configure the right artifact version snapshot number in the root pom in the develop branch.
+- Commit and push the develop branch to remote.
+- Make release branch from develop branch using gitFlow. Set version ( use pattern vMajor.Minor.Build ) to snapshot version without SNAPSHOT text.
 - Push release branch to remote.
 - Start Jenkins job ArtifactoryDev and choose release branch, enable tag checkbox and optional enable deploy checkbox.
 - Pull deploy changes from remote/release branch into local release branch.
-- Merge local release branch into master and developer branch. Solve any merge conflicts. Now the developer en master branch have updated version numbers that points to a new release number.
+- Merge local release branch into master and develop branch. Solve any merge conflicts. Now the develop en master branch have updated version numbers that points to a new release number.
+- Push develop and master branch to remote.
 - Remove release branch local and remote.
